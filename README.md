@@ -81,8 +81,10 @@ for f in 1 2 ; do echo "webserver web0$f" ; curl 192.168.50.1$f ; done
 
 
 - From the host web browser visit the following URLs :
-  - [192.168.5.11](http://192.168.50.11)
-  - [192.168.5.12](http://192.168.50.12)
+
+  - [192.168.50.11](http://192.168.50.11)
+  - [192.168.50.12](http://192.168.50.12)
+
 
 ![image](https://user-images.githubusercontent.com/85481359/124901469-58c76e80-dfe2-11eb-870d-67218bf66219.png)
 
