@@ -1,5 +1,7 @@
 # vagrant-multimachine-web
-Vagrant boxes nginx webservers in a single VagrantFile
+
+## Description
+Create 2 vagrant boxes nginx webservers named web01 and web02 in a single VagrantFile with the VirtualBox provider
 
 ### Pre-requirements
 
@@ -9,7 +11,7 @@ Vagrant boxes nginx webservers in a single VagrantFile
 ## How to use this repo
 
 - Clone
-- Vagrant up
+- Boot the VMs
 - Test
 
 ---
