@@ -1,3 +1,9 @@
+$script = <<-'SCRIPT'
+apt-get update
+apt-get install mysql -y
+SCRIPT
+
+
 Vagrant.configure("2") do |config|
 
   (1..2).each do |i|
@@ -8,5 +14,10 @@ Vagrant.configure("2") do |config|
       node.vm.network :forwarded_port, guest:80, host: "#{8080+i}"
     end
   end
-  
-end
+
+    config.vm.define "mysql" do |mysql|
+      mysql.vm.box = "vivien/mysql"
+      mysql.vm.hostname = "mysql"
+      mysql.vm.network "private_network", ip: "192.168.50.100"
+    end
+  end
