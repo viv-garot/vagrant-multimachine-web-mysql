@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   end
 
     config.vm.define "mysql" do |mysql|
-      mysql.vm.box = "vivien/bionic64"
+      mysql.vm.box = "vivien/mysql"
       mysql.vm.hostname = "mysql"
     end
   end
