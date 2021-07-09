@@ -18,5 +18,6 @@ Vagrant.configure("2") do |config|
     config.vm.define "mysql" do |mysql|
       mysql.vm.box = "vivien/mysql"
       mysql.vm.hostname = "mysql"
+      mysql.vm.network "private_network", ip: "192.168.50.100"
     end
   end
