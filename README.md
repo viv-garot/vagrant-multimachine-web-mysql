@@ -88,3 +88,29 @@ for f in 1 2 ; do echo "webserver web0$f" ; curl 192.168.50.1$f ; done
 
 ![image](https://user-images.githubusercontent.com/85481359/124901469-58c76e80-dfe2-11eb-870d-67218bf66219.png)
 
+
+### Check mysql service status
+
+```
+vagrant ssh mysql -c "systemctl status mysql"
+```
+
+
+#### Sample output
+
+```
+vagrant ssh mysql -c "systemctl status mysql"
+● mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2021-07-09 09:06:54 UTC; 5min ago
+  Process: 503 ExecStart=/usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid (code=exited, status=0/SUCCESS)
+  Process: 441 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+ Main PID: 505 (mysqld)
+    Tasks: 27 (limit: 2333)
+   CGroup: /system.slice/mysql.service
+           └─505 /usr/sbin/mysqld --daemonize --pid-file=/run/mysqld/mysqld.pid
+
+Jul 09 09:06:53 mysql systemd[1]: Starting MySQL Community Server...
+Jul 09 09:06:54 mysql systemd[1]: Started MySQL Community Server.
+Connection to 127.0.0.1 closed.
+```
