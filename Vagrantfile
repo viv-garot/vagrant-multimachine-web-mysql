@@ -1,9 +1,3 @@
-$script = <<-'SCRIPT'
-apt-get update
-apt-get install mysql -y
-SCRIPT
-
-
 Vagrant.configure("2") do |config|
 
   (1..2).each do |i|
