@@ -1,7 +1,7 @@
 # vagrant-multimachine-web
 
 ## Description
-Create 2 vagrant boxes nginx webservers named web01 and web02 in a single VagrantFile with the VirtualBox provider
+Create 2 vagrant boxes nginx webservers named web01 and web02 and one mysql box in a single VagrantFile with the VirtualBox provider
 
 ### Pre-requirements
 
